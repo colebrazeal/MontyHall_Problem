@@ -1,0 +1,45 @@
+MONTYHALL PSEUDOCODE
+
+DEFINE "CLASS" labeled "STATISTICS"
+    SET a "CONSTRUCTOR" for games won and games lost SET TO 0 and for same door decision and switched door decision SET TO 0
+
+ENDDEFINE
+
+DEFINE 
+CREATE a "LET" statement with the "TOTALGAMES" SET TO 10,000
+    CREATE a "SELECTDOOR" SET TO "FUNCTION" with a "RETURN" statement including a "MATH.FLOOR" and a "MATH.RANDOM" 
+    setting the doors even with a "*3" to randomize the doors
+
+    Create a "GAMES" SET TO a "FUNCTION" with a "LET" statement with "i" SET TO 0 and "GAMES" SET TO 10,000
+
+    Create a "FOR" loop with "i" less than "TOTALGAMES" and "++i". Then a "GAMES.PUSH" with "SELECTDOOR" 
+    to push the selected door with the 10,000 "GAMES" function. then "RETURN" "GAMES"
+ENDDEFINE
+
+DEFINE a "PLAY" SET TO "FUNCTION" with "SWITCH DOOR"
+    SET a "LET" satement with "i" SET TO 0 for the function and "j" SET TO "GAMES.LENGTH", "WINNINGDOOR", 
+    "RANDOMGUESS", "TOTALGAMESWON" and then make the function SET TO 0
+
+    Create a "FOR" loop with "i" less than "j" and "++i"
+    Establish "WINNINGDOOR" SET TO "GAMES [i]"
+    then establish "RANDOMGUESS" SET TO "SELECTDOOR"
+    Create an "IF" statment with "RANDOMGUESS" equal in value and type to "WINNINGDOOR" followed with a "&& !SWITCHDOOR" 
+    followed by an  "OR" statement with "RANDOMGUESS" not equal to "WINNINGDOOR" and "&& SWITCHDOOR"
+
+    Create a "TOTALTIMESWON++" adding one each time 
+ENDDEFINE
+
+DEFINE
+followed by a "RETURN TOTALTIMESWON"
+ENDDEFINE
+
+Commented out "GAME SIMULATION" to organize my "console.logs"
+
+Create a "CONSOLE.LOG" with "PLAYING " + "TOTALGAMES" + " GAMES" to fire the "TOTALGAMES" statememt
+
+Create a "CONSOLE.LOG" with a "PLAY (FALSE)" divided by 100 and a "+ %" to establish the outcome as a percentage for
+"OF GAMES WERE WON WHEN NOT SWITCHING DOOR"
+
+Create a "CONSOLE.LOG" with a "PLAY (TRUE)" divided by 100 and a "+ %" to establish the outcome as a percentage for
+"OF GAMES WERE WON WHEN SWITCHING DOOR"
+
