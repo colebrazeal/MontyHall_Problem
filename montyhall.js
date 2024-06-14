@@ -34,6 +34,14 @@ let totalGames = 10000
 	}
 	return totalTimesWon;
     };
+
+	function runSimulation() {
+		let sameDoorResult = play(false) / 100 + "%" + " of games were won when not switching door";
+		let changeDoorResult = play(true) / 100 + "%" + " of games were won when switching door";
+		
+		document.getElementById("sameDoorResult").innerText = sameDoorResult;
+		document.getElementById("changeDoorResult").innerText = changeDoorResult;
+	}
  
 //GAME SIMULATION
  

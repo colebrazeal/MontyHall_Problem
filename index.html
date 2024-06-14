@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monty Hall Game Simulation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Monty Hall Game Simulation</h1>
+        <p class="body-text">
+            The Monty Hall game involves a contestant choosing one of three doors, 
+            behind one of which is a car and behind the others are goats. 
+            After the initial choice, the host, who knows what's behind the doors, 
+            opens one of the remaining doors to reveal a goat. 
+            <br>
+            <br>
+            The contestant is then given the option to either stick with their original choice or switch to the other unopened door. 
+            The puzzle explores which strategy—sticking or switching—gives the contestant a better chance of winning the car.
+            <br>
+            <br>
+            This simple JavaScript function simulates a player scenario for that game returning the odd percentage of wins vs losses.
+        </p>
+        <button class="btn" onclick="runSimulation()">Run Simulation</button>
+        <div class="results" id="results">
+            <p id="sameDoorResult"></p>
+            <p id="changeDoorResult"></p>
+        </div>
+    </div>
+
+    <script src="montyhall.js"></script>
+</body>
+</html>
